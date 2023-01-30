@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Meo {
+        constructor(name, weight) {
+            this.name = name;
+            this.weight = weight;
+        }
+
+        eat(mx) {
+            this.weight += mx.weight / 2;
+            mx.isDie = true;
+        }
+
+        getI4() {
+            alert(this.name + ' co can nang la ' + this.weight)
+        }
+    }
+
+    class chuot {
+        constructor(name, weight) {
+            this.name = name;
+            this.weight = weight;
+            this.isDie = false;
+        }
+
+        getI4() {
+            if (this.isDie) {
+                alert(this.name + " đã chết")
+            } else {
+                alert(this.name + ' có cân nặng là ' + this.weight)
+            }
+        }
+    }
+
+    let c1 = new Meo('Tom', 12);
+    let m1 = new chuot('Chuột cống', 5);
+    c1.eat(m1);
+    c1.getI4();
+    m1.getI4();
+
+</script>
