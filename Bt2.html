@@ -28,24 +28,24 @@
     // },50)
 
     //câu 2
-    // let x = document.getElementById('anh');
-    // let speex = 10;
-    // setInterval(() => {
-    //         x.style.left = parseInt(x.style.left) + 'px';
-    //         if (parseInt(x.style.left) + speex >= window.innerWidth-200) {
-    //             x.style.top = parseInt(x.style.top) + speex + 'px';
-    //         }
-    //         if (parseInt(x.style.top) + speex >= window.innerHeight) {
-    //             x.style.left = parseInt(x.style.left) - speex + 'px'
-    //         }
-    //         if (parseInt(x.style.left) === 0) {
-    //             x.style.top = parseInt(x.style.top) - speex + 'px'
-    //         }
-    //         if (parseInt(x.style.top) === 0) {
-    //             x.style.left = parseInt(x.style.left) + speex + 'px'
-    //         }
-    //     }, 10
-    // )
+    let x = document.getElementById('anh');
+    let speex = 10;
+    setInterval(() => {
+            x.style.left = parseInt(x.style.left) + 'px';
+            if (parseInt(x.style.left) + speex >= window.innerWidth-200) {
+                x.style.top = parseInt(x.style.top) + speex + 'px';
+            }
+            if (parseInt(x.style.top) + speex >= window.innerHeight) {
+                x.style.left = parseInt(x.style.left) - speex + 'px'
+            }
+            if (parseInt(x.style.left) === 0) {
+                x.style.top = parseInt(x.style.top) - speex + 'px'
+            }
+            if (parseInt(x.style.top) === 0) {
+                x.style.left = parseInt(x.style.left) + speex + 'px'
+            }
+        }, 10
+    )
 
     //bai 3
     // let x = document.getElementById('anh');
@@ -66,45 +66,45 @@
     // }, 10)
 
     //bai4
-    let x = document.getElementById('anh');
-    let speedx = 0;
-    let speedy = 1;
-    setInterval(() => {
-        x.style.left = parseInt(x.style.left) + speedx + 'px';
-        x.style.top = parseInt(x.style.top) + speedy + 'px';
-        if (parseInt(x.style.left) >= window.innerWidth) {
-            x.style.left = speedx-200 +'px';
-        }
-        if(parseInt(x.style.left) < speedx-200) {
-            x.style.left =window.innerWidth+'px'; }
-
-        if (parseInt(x.style.top) >= window.innerHeight) {
-            x.style.top = speedy-200+'px';
-        }
-        if (parseInt(x.style.top) < speedy-200) {
-            x.style.top = window.innerHeight+'px';
-        }
-
-    },1)
-        window.addEventListener('keydown', (e) => {
-            if (e.key == 'd') {
-                speedx = 1;
-                speedy = 0;
-            }
-            if (e.key == 'a') {
-                speedx = -1;
-                speedy = 0;
-            }
-
-            if (e.key == 'w') {
-                speedx = 0;
-                speedy = -1;
-            }
-            if (e.key == 's') {
-                speedx = 0;
-                speedy = 1;
-            }
-        })
+    // let x = document.getElementById('anh');
+    // let speedx = 0;
+    // let speedy = 1;
+    // setInterval(() => {
+    //     x.style.left = parseInt(x.style.left) + speedx + 'px';
+    //     x.style.top = parseInt(x.style.top) + speedy + 'px';
+    //     if (parseInt(x.style.left) >= window.innerWidth) {
+    //         x.style.left = speedx-200 +'px';
+    //     }
+    //     if(parseInt(x.style.left) < speedx-200) {
+    //         x.style.left =window.innerWidth+'px'; }
+    //
+    //     if (parseInt(x.style.top) >= window.innerHeight) {
+    //         x.style.top = speedy-200+'px';
+    //     }
+    //     if (parseInt(x.style.top) < speedy-200) {
+    //         x.style.top = window.innerHeight+'px';
+    //     }
+    //
+    // },1)
+    //     window.addEventListener('keydown', (e) => {
+    //         if (e.key == 'd') {
+    //             speedx = 1;
+    //             speedy = 0;
+    //         }
+    //         if (e.key == 'a') {
+    //             speedx = -1;
+    //             speedy = 0;
+    //         }
+    //
+    //         if (e.key == 'w') {
+    //             speedx = 0;
+    //             speedy = -1;
+    //         }
+    //         if (e.key == 's') {
+    //             speedx = 0;
+    //             speedy = 1;
+    //         }
+    //     })
 </script>
 </body>
 </html>

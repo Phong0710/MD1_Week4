@@ -9,8 +9,8 @@
      alt=""
      id="anh"
      style="
-     width: 400px ;
-     height: 400px;
+     width: 200px ;
+     height:200px;
      border-radius: 70%;
      position: relative;
      top:0;
@@ -22,9 +22,9 @@
     let x = document.getElementById('anh');
     setInterval(() => {
       x.style.left = parseInt(x.style.left)+10+'px';
-      if(parseInt(x.style.left) >= window.innerWidth){
-        x.style.left="-150px";
-      }
+      // if(parseInt(x.style.left) >= window.innerWidth){
+      //   x.style.left="-150px";
+      // }
     },50)
 
 </script>
