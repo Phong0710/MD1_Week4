@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Chuot {
+        constructor(name, kl, speed) {
+            this.name = name;
+            this.kl = kl;
+            this.speed = speed;
+            this.isDie = false;
+        }
+
+        gaugau() {
+            if (this.isDie === false) {
+                alert('Chit, chit');
+            }
+        }
+
+        getI4() {
+            if (this.isDie) {
+                alert(this.name + " đã chết")
+            } else {
+                alert(this.name + ' có tốc độ là ' + this.speed)
+            }
+        }
+
+    }
+
+    class Meo {
+        constructor(name, kl, speed) {
+            this.name = name;
+            this.kl = kl;
+            this.speed = speed;
+        }
+
+        eat(a) {
+            if (a.isDie === false && a.speed < this.speed) {
+                this.kl += a.kl;
+                a.isDie = true;
+            } else {
+                alert("hihih!! đố anh bắt được em :3")
+            }
+
+        }
+
+        gaugau() {
+            alert('meo, meo');
+        }
+
+        getI4() {
+            alert(this.name + ' co tốc độ la ' + this.speed)
+        }
+    }
+
+    let Meo1 = new Meo('tom', 7, 12);
+    let Chuot1 = new Chuot('Jerry', 8, 13);
+    console.log(Chuot1)
+    Meo1.eat(Chuot1);
+    console.log(Chuot1);
+    Chuot1.gaugau();
+    Chuot1.getI4();
+    Meo1.gaugau();
+    Meo1.getI4();
+</script>
