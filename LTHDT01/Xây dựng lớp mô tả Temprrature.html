@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Temperature {
+        constructor(a) {
+            this.a = a;
+        }
+
+        NhietdoF() {
+            return 9 / 5 * this.a + 32;
+        }
+
+        Kenvin() {
+            return this.a + 273
+        }
+    }
+
+    let Temperature1 = new Temperature(25);
+    let NhietdoF1 = Temperature1.NhietdoF();
+    let Kenvin1 = Temperature1.Kenvin();
+
+    alert("Nhiệt độ K: " + Kenvin1 + " Nhiệt độ F: " + NhietdoF1)
+</script>
