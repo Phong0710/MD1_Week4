@@ -29,20 +29,22 @@
 
     //câu 2
     let x = document.getElementById('anh');
-    let speex = 10;
+    let X=5;
+    let Y=5;
     setInterval(() => {
-            x.style.left = parseInt(x.style.left) + 'px';
-            if (parseInt(x.style.left) + speex >= window.innerWidth-200) {
-                x.style.top = parseInt(x.style.top) + speex + 'px';
+            x.style.left = parseInt(x.style.left) +X+ 'px';
+            x.style.top = parseInt(x.style.top) + Y+'px';
+            if (parseInt(x.style.left)  >= window.innerWidth-200) {
+                X = -X;
             }
-            if (parseInt(x.style.top) + speex >= window.innerHeight) {
-                x.style.left = parseInt(x.style.left) - speex + 'px'
+            if (parseInt(x.style.top)  >= window.innerHeight-200) {
+               Y=-Y;
             }
             if (parseInt(x.style.left) === 0) {
-                x.style.top = parseInt(x.style.top) - speex + 'px'
+                X=-X;
             }
             if (parseInt(x.style.top) === 0) {
-                x.style.left = parseInt(x.style.left) + speex + 'px'
+                Y=-Y;
             }
         }, 10
     )
